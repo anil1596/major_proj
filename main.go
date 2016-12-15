@@ -26,10 +26,11 @@ func is_error(err error) bool {
 
 func main() {
 	//server starts listening on port 27001
-
+	//my_address := ""
 	if len(os.Args) <= 0 {
 		fmt.Println("Enter Socket information")
 		os.Exit(0)
+		//my_address = os.Args[1]
 	}
 
 	listener, err := net.Listen("tcp", os.Args[1])
@@ -37,6 +38,7 @@ func main() {
 
 	//to close server automatically
 	defer listener.Close()
+
 	fmt.Println("###  Server started! Waiting for connections  ###")
 	for {
 		//extract connection from listening_port queue
@@ -137,3 +139,20 @@ func updatelog(conn net.Conn) {
 	}).Info("served")
 
 }
+
+//function to retrive local ip address
+// func GetLocalIP() string {
+// 	addrs, err := net.InterfaceAddrs()
+// 	if err != nil {
+// 		return ""
+// 	}
+// 	for _, address := range addrs {
+// 		// check the address type and if it is not a loopback the display it
+// 		if ipnet, ok := address.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+// 			if ipnet.IP.To4() != nil {
+// 				return ipnet.IP.String()
+// 			}
+// 		}
+// 	}
+// 	return ""
+// }
