@@ -4,3 +4,6 @@
  ## Admin page of application
 1: Admin can load the list of the system where monitoring client is installed and get the screenshots of the systems connected.
   ![alt text](https://github.com/anil1596/watchman/blob/master/take_shot/admin.png "Admin handle")
+
+example: Screenshot of the one of the connected system
+    ![alt text](https://github.com/anil1596/watchman/blob/master/take_shot/client.png "Client System")
