@@ -7,3 +7,6 @@
 
 example: Screenshot of the one of the connected system
     ![alt text](https://github.com/anil1596/watchman/blob/master/take_shot/client.png "Client System")
+
+
+It is implemented using Scrot [SCReenshOT](https://github.com/resurrecting-open-source-projects/scrot), an open source, powerful and flexible, command line utility for taking screen shots of your Desktop, Terminal or a Specific Window manually or automatically by Cron job. Scrot is similar to Linux ‘import‘ command, but uses ‘imlib2‘ library to capture and save images. It supports multiple image formats (JPG, PNG, GIF, etc). 
